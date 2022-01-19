@@ -1,0 +1,123 @@
+body {
+  font-family: "Lato", sans-serif;
+
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#cf1c25, #850707);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  vertical-align: middle;
+}
+
+.sidenav a {
+  padding: 20px 20px 20px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.container{
+  width: 100%;
+  min-height:  100vh;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.navbar{
+  width: 106%;
+  display: flex;
+  align-items: center;
+}
+.accountbtn{
+  width: 50px;
+  cursor: pointer;
+  margin: 30px -60px;
+  border-radius: 8px;
+}
+.menu-icon{
+  top: 55px;
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+}
+nav{
+  position:relative ;
+  margin-right: 140px;
+  flex: 1;
+  text-align: right;
+  
+}
+nav ul li{
+  margin-top: 30px;
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+nav ul li a:hover{
+  color: #ff0000;
+}
+.Logbtn{  
+  position: fixed;  
+  padding: 12px 10px;
+  justify-content: center;
+  margin-left: 1035px ;
+  margin-top: -44px;
+  width: 138px;
+  border: 0;
+  outline: none;
+  color: #fff;
+  background: linear-gradient(#ff545c, #cc1e1e);
+  border-radius:6px;
+  cursor: pointer;
+  display: flex;
+}
+
+
+.settings{
+  width:30px;
+  
+}
+.Contact{
+  width: 30px;
+  
+}
+.disconnect{
+  width:30px;
+  
+}

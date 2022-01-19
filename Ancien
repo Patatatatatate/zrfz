@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>Sound</Title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="menu.png" class="menu-icon" onclick="openNav()">  
+  <div class="container">
+    <div class="navbar">
+        <img src="Soulless V.png" class="accountbtn" href="#">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Album</a></li>
+                <li><a href="#">Sample Pack</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Matériel</a></li>
+            </ul>
+        </nav>
+        
+        
+        
+    </div>
+    <button class="Logbtn" onclick="window.location.href = 'Login.html'">Login</button>
+  </div>
+<div id="mySidenav" class="sidenav" >
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Settings</a>
+  <a href="#">Contact</a>
+  <a href="#">Disconnect</a>
+</div>
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 
