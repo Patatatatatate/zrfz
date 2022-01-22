@@ -2,115 +2,193 @@ body {
     font-family: "Lato", sans-serif;
     background-color: #080710;
     background-size: 1920px 1080px;
-  }
+}
 
-  .header{
-      top: 100px;
-      background-color: rgba(255,255,255,0.09);
-      height : 100px;
-      margin:  0px;
-      border-radius: 10px;
-      border: 2px solid rgba(255,255,255,0.1);
-      letter-spacing: 0.5px;
+.header {
+    top: 100px;
+    background-color: rgba(255, 255, 255, 0.09);
+    height: 100px;
+    margin: 0px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: left;
+}
 
-  }
+.title {
+    display: block;
+    align-self: center;
+    color: whitesmoke;
+    margin: auto;
+}
 
-  .title{
-      position:relative;
-      margin-left: 600px;
-      top: -43px;
-      color: whitesmoke ;
-  }
-
-  .sidenav {
-    height: 50%;
-    width: 0;
-    position: fixed;
+.sidenav {
+    height: auto;
+    width: 100vw;
     z-index: 1;
-    top: 10px;
-    left: 0;
     background-color: #6c6c6c;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
     border-radius: 10px;
-  }
+}
 
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
+.sidenava {
+    color: #fffbfb;
+    font-size: 0px;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+    opacity: inherit;
+    visibility: inherit;
+}
+
+.mySidenav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 0vh;
+    width: 0vw;
+    left: 50vw;
+    top: 50vh;
+    transition: 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 8;
+    background-color: #6c6c6c;
+}
+
+.sidenav a {
+    padding: 8px 20px;
     text-decoration: none;
     font-size: 20px;
     color: #fffbfb;
     display: block;
     transition: 0.3s;
-  }
+    margin: auto;
+    text-align: center;
+}
 
-  .sidenav a:hover {
+.sidenav a:hover {
     color: #f1f1f1;
-  }
+}
 
-  .sidenav .closebtn {
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 40px;
     margin-left: 50px;
-  }
+}
 
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+span[class*="sidenav"] {
+    all: notset;
+    padding: auto;
+    font-size: 40px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    width: fit-content;
+    display: block;
+    margin: auto 10px;
+    height: fit-content;
+}
 
-.span{
-    position:relative;
-    font-size:40px;
-    cursor:pointer;
+@media screen and ((max-height: 450px) or (max-width:450px)) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    .sidenava {
+        font-size: 10hv !important;
+    }
+}
+
+.span {
+    position: relative;
+    font-size: 40px;
+    cursor: pointer;
     top: 23px;
-    left:30px;
-    text-align:center;
-    color:white;
+    left: 30px;
+    text-align: center;
+    color: white;
 }
-.navbar{
-  display: flex;
-  align-items: center;
-}
-nav{
-  text-align: center;
 
-  flex: 1;
+.navbar {
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+}
 
+nav {
+    text-align: center;
+    width: 100%;
 }
-nav ul li{
-  margin-top: -10px;
-  list-style: none;
-  display: inline-block;
-  margin-right: 30px;
-}
-nav ul li a{
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 14px;
-}
-nav ul li a:hover{
-  color: white;
-}
-.Logbtn{
-  position: fixed;
-  padding: 15px 15px;
-  justify-content: center;
-  margin-left: 1165px;
-  margin-top: -108px;
-  width: 145px;
-  border: 0;
-  outline: none;
-  color: #080710;
-  background-color: #ffffff;
-  border-radius:6px;
-  cursor: pointer;
-  display: flex;
-}
-.Logbtn :hover{
-  background: linear-gradient(grey,white);
 
+nav ul {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style: none;
+    display: block;
+    margin: auto 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.Logbtn {
+    position: fixed;
+    padding: 15px 15px;
+    justify-content: center;
+    margin-left: 1165px;
+    margin-top: -108px;
+    width: 145px;
+    border: 0;
+    outline: none;
+    color: #080710;
+    background-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+}
+
+.Logbtn :hover {
+    background: linear-gradient(grey, white);
+}
+
+main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: space-around;
+}
+
+main div {
+    background-color: rgb(80, 80, 80);
+    border-radius: 10px;
+    margin: 5px 30px;
+}
+
+main div h2 {
+    text-align: center;
+}
+
+main div p {
+    padding: 5px 30px;
 }

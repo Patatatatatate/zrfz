@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <Title>Sound</Title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <header>
-            <div class="header">
-                <span class="span" onclick="openNav()">&#9776;</span>
-                <h1 class="title">SoundB</h1>
+<head>
+    <Title>Sound</Title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" crossorigin="anonymous">
+    <script src="index.js"></script>
+</head>
 
-                <button class="Logbtn" onclick="window.location.href = 'LoginIn.html'">Login</button>
-
-
-
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">Explorer</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
-                </div>
+<body>
+    <header>
+        <div class="header">
+            <span class="sidenav" onclick="openNav()">&#9776;</span>
+            <h1 class="title">SoundB</h1>
+            <span class="sidenav" style="visibility: hidden;">&#9776;</span>
+            <!-- pas utile <button class="Logbtn" onclick="window.location.href = 'LoginIn.html'">Login</button>
+                -->
 
 
+            <div class="mySidenav" id="mySidenav">
+                <a class="sidenava" href="javascript:void(0)" style="text-decoration: none;" class="closebtn" onclick="closeNav()">&times;</a>
+                <a class="sidenava" href="#">Explorer</a>
+                <a class="sidenava" href="#">Services</a>
+                <a class="sidenava" href="#">Clients</a>
+                <a class="sidenava" href="#">Contact</a>
+            </div>
 
 
-          <script>
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
 
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
 
-          </script>
-          </div>
-        </header>
+            <script>
+                function openNav() {
+                    //document.getElementById("mySidenav").style.visibility = "visible";
+                    modifCSSRule(".mySidenav", "visibility", "visible")
+                    modifCSSRule(".mySidenav", "opacity", 1)
+                    modifCSSRule(".mySidenav", "height", "100vh")
+                    modifCSSRule(".mySidenav", "width", "100vw")
+                    modifCSSRule(".mySidenav", "left", "0vw")
+                    modifCSSRule(".mySidenav", "top", "0vh")
+                    modifCSSRule(".sidenava", "font-size", "14vh")
+                }
 
+                function closeNav() {
+                    modifCSSRule(".mySidenav", "visibility", "hidden")
+                    modifCSSRule(".mySidenav", "opacity", 0)
+                    modifCSSRule(".mySidenav", "height", "0vh")
+                    modifCSSRule(".mySidenav", "width", "0vw")
+                    modifCSSRule(".mySidenav", "left", "50vw")
+                    modifCSSRule(".mySidenav", "top", "50vh")
+                    modifCSSRule(".sidenava", "font-size", "0px")
+                }
+            </script>
+        </div>
+    </header>
+
+
+    <nav>
         <div class="navbar">
-
-          <nav>
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="#">Album</a></li>
-                  <li><a href="#">Sample Pack</a></li>
-                  <li><a href="#">Forum</a></li>
-                  <li><a href="#">Matériel</a></li>
-              </ul>
-          </nav>
-
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#album">Album</a></li>
+                <li><a href="#smplepck">Sample Pack</a></li>
+                <li><a href="#forum">Forum</a></li>
+                <li><a href="#material">Matériel</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
-      </div>
+    <main>
 
-    </body>
+        <div id="album">
+            <h2>Album</h2>
+            <p>blabla sur tes albums</p>
+        </div>
+        <div id="smplepck">
+            <h2>Sample Pack</h2>
+            <p>blabla sur tes albums</p>
+        </div>
+        <div id="forum">
+            <h2>Forum</h2>
+            <p>blabla sur tes albums</p>
+        </div>
+        <div id="material">
+            <h2>Matériel</h2>
+            <p>blabla sur tes albums</p>
+        </div>
+        </div>
+    </main>
+
+</body>
+
 </html>
